@@ -1,0 +1,25 @@
+.machine{
+    background-color:black;
+    border:solid rgb(252, 101, 101) 10px;
+    height:500px;
+    width:1000px;
+    margin:100px;
+
+    display:flex;
+   
+}
+.slot{
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: white;
+    margin:20px;
+    height:400px;
+    width:30%;
+}
+.slot > .value{
+    font-size:100pt;
+    text-align: center;
+    padding:25%;
+    margin-top:500px;
+   
+}
