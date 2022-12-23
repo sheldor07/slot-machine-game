@@ -1,10 +1,15 @@
 
 :root{
     --speed:0;
-    --iteration-count:20;
+    --iteration-count: 20;
+    --primary-colour:#000000;
+    --secondary-colour:#FC6565;
 }
 *{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body{
+    background-color: var(--secondary-colour);
 }
 .header{
     text-align: center;
@@ -36,7 +41,7 @@
 
     animation-name:slotspin;
     animation-duration:calc(1s / var(--speed)) ;
-    animation-iteration-count: 20;
+    animation-iteration-count: var(--iteration-count);
     animation-timing-function: ease-out;
     z-index:1;
 
@@ -84,12 +89,19 @@ p{
     text-align: center;
 }
 #resAlert{
+    font-weight:bold;
     font-size:20pt;
+    background-color: white;
     margin-top:10px;
     padding:10px;
-    border:2px solid black;
+    border:10px solid black;
     width:200px;
     height:50px;
     text-align:center;
     line-height:50px;
+}
+footer{
+    text-align: center;
+    font-size: 20pt;
+
 }
