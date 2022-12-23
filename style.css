@@ -1,12 +1,20 @@
+
 :root{
-    --speed:5;
+    --speed:0;
+    --iteration-count:20;
+}
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header{
+    text-align: center;
 }
 .machine{
     background-color:black;
     border:solid rgb(252, 101, 101) 10px;
     height:500px;
     width:1000px;
-    margin:100px;
+    margin:0 auto;
 
     display:flex;
    
@@ -19,28 +27,69 @@
     height:450px;
     width:30%;
     z-index:3;
-    line-height:250px;
+    line-height:400px;
     overflow: hidden;
 }
 .slot > .value{
     font-size:100pt;
     text-align: center;
- 
-    animation:slotspin infinite ease-in-out;
-    animation-duration: calc(1s/var(--speed));
+
+    animation-name:slotspin;
+    animation-duration:calc(1s / var(--speed)) ;
+    animation-iteration-count: 20;
+    animation-timing-function: ease-out;
     z-index:1;
+
   
 }
 @keyframes slotspin{
     0%{
         transform:translateY(-300px);
+        filter:blur(5px);
     }
     100%{
         transform:translateY(300px);
+        filter:blur(5px);
     }
 }
 .inpNumBox{
-    height:100px;
-    width:100px;
-    font-size: 30pt;
+    height:50px;
+    width:40px;
+    font-size: 20pt;
+    margin-left:40%;
+    margin-right:5%;
+    margin-top:10px;
+}
+.container{
+    display:flex;
+    justify-content: center;
+}
+.btn{
+    margin:10px;
+    padding:10px;
+    font-size: 20pt;
+    font-weight:bold;
+    margin-top:10px;
+    background-color:rgb(252, 101, 101) ;
+    border:solid 2px black;
+}
+.btn:hover{
+    background-color:black;
+    border:solid 2px rgb(252, 101, 101) ;
+    color:white;
+    
+}
+p{
+    font-size: 40pt;
+    text-align: center;
+}
+#resAlert{
+    font-size:20pt;
+    margin-top:10px;
+    padding:10px;
+    border:2px solid black;
+    width:200px;
+    height:50px;
+    text-align:center;
+    line-height:50px;
 }
